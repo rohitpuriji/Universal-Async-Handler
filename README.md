@@ -4,6 +4,7 @@
 ###### This library is very efficient for users who are still using AsyncTasks to post data.
 
 Only you have to add jitpack in your root build.gradle : 	
+
 	allprojects { 	
 		repositories  	
 		{ 	
@@ -13,15 +14,38 @@ Only you have to add jitpack in your root build.gradle :
 	} 	
    
   and add the dependency in app.gradle : <br/>
-  dependencies {  
-	        compile 'com.github.rohitpuriji:UniversalAsyncHandler:-SNAPSHOT'
-	}
   
+  	dependencies {  
+	        compile 'com.github.rohitpuriji:UniversalAsyncHandler:-SNAPSHOT'
+		}
+  
+  This library made with java8 so add the jack option inside defaultCondig in your app gradle file :<br/>
+  
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        jackOptions {
+            enabled true
+        }
+    
+  
+  and add compile ad dex options :
+  
+      dexOptions {
+        incremental true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    
   now you can simply create a post request by using "HttpPostCaller" class and its method getReponse() this will return object type like this :
    <br/>
    
-   Object object = HttpPostCaller.getResponse(MainActivity.this,"Your post url", new<br/>
-   JSONObject(),"Your loading message...");<br/>
+   	Object object = HttpPostCaller.getResponse(MainActivity.this,"Your post url", new<br/>
+   	JSONObject(),"Your loading message...");<br/>
         if (object instanceof  String){
             AppLogs.printLogs("response :",object.toString());
         }
