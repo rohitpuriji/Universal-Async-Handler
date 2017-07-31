@@ -45,7 +45,7 @@ Only you have to add jitpack in your root build.gradle :
    <br/>
    
    	Object object = HttpPostCaller.getResponse(MainActivity.this,"Your post url", new<br/>
-   	JSONObject(),"Your loading message...");<br/>
+   	JSONObject(),"Your loading message...");
         if (object instanceof  String){
             AppLogs.printLogs("response :",object.toString());
         }
