@@ -1,31 +1,34 @@
-# UniversalAsyncHandler
-UniversalAsyncHandler to provide http post requests efficiently...
+# **UniversalAsyncHandler**
+## UniversalAsyncHandler to provide http post requests efficiently...
 
-This library is very efficient for users who are still using AsyncTasks to post data.
+###### This library is very efficient for users who are still using AsyncTasks to post data.
 
-Only you have to add jitpack in your root build.gradle :
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-  
-  and add the dependency in app.gradle :
-  dependencies {
+Only you have to add jitpack in your root build.gradle : 	
+	allprojects { 	
+		repositories  	
+		{ 	
+			... 	
+			maven { url 'https://jitpack.io' } 	
+		} 	
+	} 	
+   
+  and add the dependency in app.gradle : <br/>
+  dependencies {  
 	        compile 'com.github.rohitpuriji:UniversalAsyncHandler:-SNAPSHOT'
 	}
   
   now you can simply create a post request by using "HttpPostCaller" class and its method getReponse() this will return object type like this :
+   <br/>
    
-   Object object = HttpPostCaller.getResponse(MainActivity.this,"Your post url", new JSONObject(),"Your loading message...");
+   Object object = HttpPostCaller.getResponse(MainActivity.this,"Your post url", new<br/>
+   JSONObject(),"Your loading message...");<br/>
         if (object instanceof  String){
             AppLogs.printLogs("response :",object.toString());
         }
 				
 				
 # Developed By
-   Rohit Puri
+   ## Rohit Puri
 
 # License
 
