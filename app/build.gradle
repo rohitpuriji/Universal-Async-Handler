@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.0"
+    buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.tech.myapplication"
         minSdkVersion 16
@@ -21,6 +21,5 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
-    compile project(':universalasynchandler')
+//    compile project(':universalasynchandler')
 }
