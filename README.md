@@ -44,8 +44,7 @@ Only you have to add jitpack in your root build.gradle :
   now you can simply create a post request by using "HttpPostCaller" class and its method getReponse() this will return object type like this :
    <br/>
    
-   	Object object = HttpPostCaller.getResponse(MainActivity.this,"Your post url", new<br/>
-   	JSONObject(),"Your loading message...");
+   	Object object = HttpPostCaller.getResponse(MainActivity.this,"Your post url", Your jsonobject,"Your loading message...");
         if (object instanceof  String){
             AppLogs.printLogs("response :",object.toString());
         }
