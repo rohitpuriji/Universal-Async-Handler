@@ -3,9 +3,6 @@
 buildscript {
     repositories {
         jcenter()
-        maven {
-            url  "https://dl.bintray.com/rohitpuri/HttpCaller"
-        }
     }
 
     dependencies {
@@ -19,6 +16,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url 'https://jitpack.io' }
     }
 }
 

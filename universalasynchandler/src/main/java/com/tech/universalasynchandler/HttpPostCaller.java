@@ -10,7 +10,7 @@ import org.json.JSONObject;
 
 public class HttpPostCaller {
 
-    public Object getResponse(Activity aActivity, final String aHttpUrl, final JSONObject aRequestJsonObject, String aLoadingMsg){
+    public static Object getResponse(Activity aActivity, final String aHttpUrl, final JSONObject aRequestJsonObject, String aLoadingMsg){
 
         new BackgroundTask(aActivity, new BackgroundThread() {
             @Override
